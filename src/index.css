@@ -1,13 +1,385 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100%; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+/* ...................navbar */
+.main_nav {
+  margin-top: 10px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  opacity: 0;
+  z-index: 111111111;
+}
+.component {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+.component2 {
+  opacity: 0;
+
+  animation: fade-in 1s ease-in-out 1s forwards;
+}
+.component3 {
+  opacity: 0;
+
+  animation: fade-in 1s ease-in-out 1.7s forwards;
+}
+.component4 {
+  opacity: 0;
+
+  animation: fade-in 1s ease-in-out 2.8s forwards;
+}
+.component5 {
+  opacity: 0;
+
+  animation: fade-in 1s ease-in-out 3.5s forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.manu a {
+  text-decoration: none;
+  color: black;
+  padding-left: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.cont {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.herosec {
+  margin-top: 10px;
+  height: 70vh;
+  width: 80vw;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: 80vw;
+  display: flex;
+
+  align-items: center;
+}
+.herodetails {
+  opacity: 0;
+  border-radius: 20px;
+  width: 60%;
+  height: inherit;
+  margin-right: 5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #56b1f638;
+
+  overflow: hidden;
+}
+.footerdet {
+  border-radius: 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #56b1f638;
+
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.herodetails .bg,
+.footerdet .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  display: flex;
+  left: 0px;
+  filter: blur(20px);
+  background-color: rgb(245, 249, 253);
+  animation: an 5s linear 2s infinite alternate;
+}
+@keyframes an {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(50deg);
+  }
+}
+.bg1,
+.bg2 {
+  width: 100%;
+  height: 50%;
+  right: 0px;
+  position: absolute;
+  transform: translate(+50%);
+}
+.bg1 {
+  background: rgb(45, 253, 251);
+  background: radial-gradient(
+    circle,
+    rgba(238, 238, 169, 0.648) 0%,
+    rgba(232, 232, 99, 0.216) 87%
+  );
+  top: 0px;
+  transform: rotate(-30deg);
+}
+.bg2 {
+  background: rgb(148, 230, 239);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(148, 230, 239, 0.0845588235294118) 0%,
+    rgba(3, 213, 230, 0.5215336134453781) 76%,
+    rgba(0, 240, 238, 0.4206932773109243) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(148, 230, 239, 0.0845588235294118) 0%,
+    rgba(3, 213, 230, 0.5215336134453781) 76%,
+    rgba(0, 240, 238, 0.4206932773109243) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(148, 230, 239, 0.0845588235294118) 0%,
+    rgba(3, 213, 230, 0.5215336134453781) 76%,
+    rgba(0, 240, 238, 0.4206932773109243) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#94e6ef",endColorstr="#00f0ee",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#94e6ef",endColorstr="#00f0ee",GradientType=1);
+  bottom: 0px;
+}
+.footerintro {
+  margin-bottom: 25px;
+}
+.herointro > h1,
+p,
+.footerintro > h1,
+p {
+  width: 80%;
+  position: relative;
+  z-index: 33;
+}
+.clist > button,
+i {
+  z-index: 33;
+  position: relative;
+}
+.heroimage {
+  opacity: 0;
+  border-radius: 20px;
+
+  width: 35%;
+  height: 100%;
+}
+.heroimage img {
+  border-radius: 20px;
+  object-fit: cover;
+}
+.clist > button,
+i {
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  color: white;
+  background-color: black;
+  margin: 10px;
+  transition: all 0.5s;
+}
+.clist > i {
+  padding: 15px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+}
+
+.clist > i:hover {
+  background-color: black;
+  color: white;
+}
+.clist > button:hover {
+  background-color: rgb(70, 68, 68);
+}
+.projects {
+  margin-top: 25px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.card {
+  width: 48%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.card:not(:hover) img {
+  animation: scaleDown 0.5s forwards;
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 700px) {
+  .cont {
+    display: inline-block !important;
+  }
+  .manu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    position: fixed;
+    right: 36px;
+    top: 44px;
+    padding: 20px 10vw;
+    transform: translatex(110%);
+  }
+  .manu a {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .navanimation {
+    animation: nevAnimation 0.5s linear alternate both;
+  }
+  .antinavanimation {
+    animation: antinevAnimation 0.5s linear alternate both;
+  }
+  @keyframes nevAnimation {
+    0% {
+      opacity: 0;
+      transform: translatex(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes antinevAnimation {
+    0% {
+      opacity: 1;
+      transform: translatex(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(110%);
+      display: none;
+    }
+  }
+  .herosec {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .heroimage {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .herodetails {
+    margin: 0;
+    width: 100%;
+  }
+  .herodetails h1 {
+    font-size: 20px;
+  }
+  .clist button {
+    display: block;
+    margin: 10px auto;
+  }
+  .clist i {
+    padding: 8px;
+  }
+  .card {
+    width: 100%;
+  }
 }
